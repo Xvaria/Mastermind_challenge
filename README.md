@@ -18,7 +18,12 @@ If you get the correct position of all balls, you will see an alert with some co
 If you lose by using all your tries, you will see an alert with some sad message saying you are not a master mind, and you will unlock the secret combination too.
 
 ![image](https://user-images.githubusercontent.com/69660332/117709437-8a64ba80-b196-11eb-9dc4-1ffd686f95e1.png)
-![image](https://user-images.githubusercontent.com/69660332/117710171-6c4b8a00-b197-11eb-90e8-4a13a8109f25.png)
+![image](https://user-images.githubusercontent.com/69660332/117712506-0d3b4480-b19a-11eb-857d-7100c252d258.png)
+
+The 'Generate' button in right top will let you generate a new game and every ball will be reset.
+
+## Play here
+https://stormyinbornbits--nicolasopf.repl.co/
 
 ## Authors
 Diego Ahumada - https://github.com/Xvaria/
