@@ -23,7 +23,7 @@ If you lose by using all your tries, you will see an alert with some sad message
 The 'Generate' button in right top will let you generate a new game and every ball will be reset.
 
 ## Play here
-https://stormyinbornbits--nicolasopf.repl.co/
+https://mastermindchallenge--nicolasopf.repl.co/
 
 ## Authors
 Diego Ahumada - https://github.com/Xvaria/
