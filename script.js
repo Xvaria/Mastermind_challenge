@@ -72,15 +72,7 @@ function drop(ev){
 
 // Button check to see if the balls are in correct place and have the correct color.
 function check(ev){
-  if (tries == 7) {
-    alert('You lose, you don\'t deserve to be called a master mind')
-    for (var i = 1; i <= 4; i++) {
-      const victory = "victory" + i;
-      document.getElementById(victory).style.backgroundColor = secret[i - 1];
-    }
-    document.getElementById('secret').style.backgroundColor = '#865c2f'
-    return;
-  }
+  check_tries()
   /*
   @id: used to put the id of the space in row. (space1-1, space1-2...space8-8.)
   @marks: clue panel (left panel) where to put the white or red ball.
@@ -137,9 +129,21 @@ function check(ev){
     }
   }
   tries++; // Increment tries when user press check buttom.
+  check_tries()
 }
 
-// Clean function of generate button to clean all colors and tries. 
+function check_tries() { // Check if user have tried 8 times (8 checked rows).
+  if (tries == 8) {
+    alert('You lose, you don\'t deserve to be called a master mind')
+    for (var i = 1; i <= 4; i++) {
+      const victory = "victory" + i;
+      document.getElementById(victory).style.backgroundColor = secret[i - 1];
+    }
+    document.getElementById('secret').style.backgroundColor = '#865c2f'
+    return;
+  }
+}
+
 function clean(ev) {
   for (var i = 1; i <= 8; i++) {
     for (var j = 1; j <= 4; j++) {
