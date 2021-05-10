@@ -26,5 +26,5 @@ The 'Generate' button in right top will let you generate a new game and every ba
 https://mastermindchallenge--nicolasopf.repl.co/
 
 ## Authors
-Diego Ahumada - https://github.com/Xvaria/
+Diego Ahumada - https://github.com/Xvaria/ <br>
 Nicolás Urrea - https://github.com/Nicolasopf/
