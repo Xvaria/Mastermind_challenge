@@ -1,4 +1,4 @@
-# Mastermind_challenge
+# Mastermind Challenge
 Mastermind is a board-game, where the user have to guess by using the logic where and which color are 4 balls of random combination are.
 
 ## Development
