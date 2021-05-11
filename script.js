@@ -23,6 +23,8 @@ for (i = 0; i < 4; i++) {
 }
 
 // Colors to use when user hit a color/position && color.
+let default_line = '#b1895e'
+let current_line = '#855d32'
 let white = "rgb(255, 255, 255)";
 let red = "rgb(139, 0, 0)";
 
@@ -106,6 +108,7 @@ function check(ev){
   }
   // IF USER WINS:
   if (corrects == 4) {
+    document.getElementsByClassName(lines[tries])[0].style.backgroundColor = default_line; // Search for the current line to change the color.
     tries = 8;
     alert('You win! You are a real master mind.');
     for (var i = 1; i <= 4; i++) {
@@ -128,22 +131,32 @@ function check(ev){
       document.getElementById(class_name).style.background = white; // Put white color to it.
     }
   }
-  tries++; // Increment tries when user press check buttom.
-  check_tries()
+   //  Change the color of actual line and the color of the next one (the next  try.)
+  tries++;
+  check_tries(tries);
+  try {
+    document.getElementsByClassName(lines[tries - 1])[0].style.backgroundColor = default_line;
+    document.getElementsByClassName(lines[tries])[0].style.backgroundColor = current_line;
+  } catch(e) {
+    //pass
+  }
 }
 
-function check_tries() { // Check if user have tried 8 times (8 checked rows).
+function check_tries() {
   if (tries == 8) {
     alert('You lose, you don\'t deserve to be called a master mind')
     for (var i = 1; i <= 4; i++) {
       const victory = "victory" + i;
+      // Show the victory combination
       document.getElementById(victory).style.backgroundColor = secret[i - 1];
     }
+    // Change the background where the victory combination is
     document.getElementById('secret').style.backgroundColor = '#865c2f'
     return;
   }
 }
 
+// Clean all the board.
 function clean(ev) {
   for (var i = 1; i <= 8; i++) {
     for (var j = 1; j <= 4; j++) {
